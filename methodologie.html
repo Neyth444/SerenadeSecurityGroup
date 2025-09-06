@@ -71,22 +71,59 @@
 
       <p class="text-gray-300 mb-12 text-center max-w-3xl mx-auto">
         La cybersécurité ne s’improvise pas. Chez <span class="text-violetserenade-500 font-semibold">Serenade</span>, 
-        nous suivons une démarche rigoureuse et reconnue internationalement (OWASP, PTES) afin de garantir un audit fiable, transparent et exploitable.  
-        Voici comment nous procédons concrètement :
+        nous suivons une démarche rigoureuse, reconnue internationalement (OWASP, PTES), afin de garantir un audit fiable et exploitable.  
+        Tous nos tests sont réalisés de manière <span class="font-semibold">non destructive et encadrée</span>, sans impact sur vos services.
       </p>
+
+<!-- Schéma pipeline -->
+<div class="flex flex-col md:flex-row items-center justify-center gap-12 mb-20 text-center">
+  <!-- Cadrage -->
+  <div class="p-4 flex flex-col items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-violetserenade-500 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6m2 4H7a2 2 0 01-2-2V6a2 2 0 012-2h3.586a1 1 0 01.707.293l1.414 1.414A1 1 0 0013.414 6H17a2 2 0 012 2v10a2 2 0 01-2 2z" />
+    </svg>
+    <p class="text-violetserenade-500 font-semibold">Cadrage</p>
+  </div>
+
+  <!-- Tests techniques -->
+  <div class="p-4 flex flex-col items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-violetserenade-500 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+    </svg>
+    <p class="text-violetserenade-500 font-semibold">Tests techniques</p>
+  </div>
+
+  <!-- Rapport -->
+  <div class="p-4 flex flex-col items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-violetserenade-500 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2h6v2m-6-4V7h6v6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+    <p class="text-violetserenade-500 font-semibold">Rapport</p>
+  </div>
+
+  <!-- Suivi -->
+  <div class="p-4 flex flex-col items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-violetserenade-500 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5V9H2v11h5m10-9l-4 4-4-4m8 8l-4-4-4 4" />
+    </svg>
+    <p class="text-violetserenade-500 font-semibold">Suivi</p>
+  </div>
+</div>
+
+
 
       <div class="space-y-16">
         <!-- Step 1 -->
         <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
           <h3 class="text-2xl font-bold mb-4 text-violetserenade-500">1. Prise de contact & cadrage</h3>
           <p class="text-gray-300 mb-4">
-            Nous commençons par un entretien (visio, téléphone ou sur site) pour comprendre vos enjeux : 
-            type d’activité, taille de votre infrastructure, applications critiques, données sensibles.
+            Nous commençons par un échange pour comprendre vos enjeux business et techniques : 
+            type d’activité, données sensibles, périmètre à auditer.
           </p>
           <ul class="list-disc list-inside text-gray-400 space-y-2">
-            <li>Définition du périmètre (site web, réseau interne, cloud, postes utilisateurs…)</li>
-            <li>Choix du type d’audit (interne, externe, applicatif, organisationnel)</li>
-            <li>Signature d’un accord de confidentialité (NDA)</li>
+            <li>Définition claire du périmètre (site, réseau, cloud, utilisateurs)</li>
+            <li>Choix du type d’audit (interne, externe, conformité, sensibilisation)</li>
+            <li>Signature d’un NDA pour protéger vos informations</li>
           </ul>
         </div>
 
@@ -94,14 +131,14 @@
         <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
           <h3 class="text-2xl font-bold mb-4 text-violetserenade-500">2. Tests & analyses techniques</h3>
           <p class="text-gray-300 mb-4">
-            Une fois le cadre défini, nous lançons une batterie de tests techniques afin d’identifier les vulnérabilités.
-            Nous combinons outils automatisés et techniques manuelles.
+            Nous combinons outils de pointe et expertise humaine pour reproduire ce qu’un attaquant pourrait tenter, 
+            mais dans un cadre sécurisé et maîtrisé.
           </p>
           <ul class="list-disc list-inside text-gray-400 space-y-2">
-            <li><strong>Scan automatisé :</strong> ports ouverts, services actifs, versions logicielles.</li>
-            <li><strong>Tests manuels :</strong> injections SQL, XSS, failles d’authentification.</li>
-            <li><strong>Référentiels :</strong> OWASP Top 10, MITRE ATT&CK.</li>
-            <li><strong>Outils :</strong> Nmap, Nikto, Burp Suite, WPScan…</li>
+            <li>Tests réalistes : injections SQL, failles d’authentification, XSS</li>
+            <li>Analyse réseau & configuration des serveurs</li>
+            <li>Référentiels : OWASP Top 10, MITRE ATT&CK</li>
+            <li>Outils professionnels : Nmap, Burp Suite, WPScan…</li>
           </ul>
         </div>
 
@@ -109,14 +146,14 @@
         <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
           <h3 class="text-2xl font-bold mb-4 text-violetserenade-500">3. Rapport clair et priorisé</h3>
           <p class="text-gray-300 mb-4">
-            À la fin des tests, nous rédigeons un rapport structuré et adapté à vos besoins. 
-            Ce n’est pas un simple listing technique : c’est un outil d’aide à la décision.
+            Vous recevez un rapport pédagogique et actionnable.  
+            Pas de jargon inutile : un outil concret pour vos équipes dirigeantes et techniques.
           </p>
           <ul class="list-disc list-inside text-gray-400 space-y-2">
-            <li>Résumé exécutif (accessible aux non-techniciens)</li>
-            <li>Tableau des vulnérabilités avec criticité</li>
-            <li>Preuves (captures d’écran, logs, démonstrations)</li>
-            <li>Recommandations concrètes et hiérarchisées</li>
+            <li>Résumé exécutif clair pour dirigeants</li>
+            <li>Tableau des vulnérabilités avec niveau de criticité</li>
+            <li>Preuves visuelles (captures, logs, démonstrations)</li>
+            <li>Plan de correction priorisé</li>
           </ul>
         </div>
 
@@ -124,26 +161,29 @@
         <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
           <h3 class="text-2xl font-bold mb-4 text-violetserenade-500">4. Suivi & accompagnement</h3>
           <p class="text-gray-300 mb-4">
-            Un audit n’est utile que si les vulnérabilités sont corrigées. 
-            Nous vous aidons à implémenter les mesures correctives et à vérifier leur efficacité.
+            Nous n’appliquons pas les correctifs à votre place, mais nous accompagnons votre équipe IT ou votre prestataire technique 
+            pour qu’ils soient mis en œuvre efficacement.
           </p>
           <ul class="list-disc list-inside text-gray-400 space-y-2">
-            <li>Support technique pour les correctifs</li>
+            <li>Support et conseils techniques lors des corrections</li>
             <li>Ateliers de sensibilisation pour vos collaborateurs</li>
-            <li><strong>Re-test</strong> après corrections</li>
+            <li><strong>Re-test</strong> possible après corrections</li>
             <li>Suivi régulier pour maintenir un haut niveau de sécurité</li>
           </ul>
         </div>
       </div>
 
-      <!-- Conclusion -->
+      <!-- Conclusion + CTA -->
       <div class="mt-20 bg-baseblack border border-violetserenade-700 p-8 rounded-xl shadow-lg text-center">
         <h3 class="text-2xl font-semibold mb-4 text-violetserenade-500">Une démarche cadrée et transparente</h3>
-        <p class="text-gray-300">
+        <p class="text-gray-300 mb-6">
           Avec <span class="text-violetserenade-500 font-semibold">Serenade</span>, vous savez toujours ce que nous faisons, pourquoi nous le faisons,
           et comment corriger les problèmes détectés.  
-          Notre méthodologie garantit la sécurité de vos données, sans surprise ni jargon inutile.
+          Notre méthodologie protège vos données, réduit vos risques financiers et préserve votre image.
         </p>
+        <a href="tarifs.html" class="inline-block bg-violetserenade-600 px-6 py-3 rounded-lg shadow hover:bg-violetserenade-700 font-semibold">
+           Demander un pré-diagnostic gratuit
+        </a>
       </div>
     </main>
 
