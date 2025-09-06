@@ -8,17 +8,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Merriweather', serif;
-        background: linear-gradient(180deg, #0b0018, #030007);
-        color: #c4b5fd;
-      }
-      h1, h2, h3 {
-        text-shadow: 0 0 12px rgba(109,40,217,0.6);
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -26,74 +17,78 @@
         theme: {
           extend: {
             colors: {
-              night: {
-                900: '#030007',
-                800: '#070010',
-                700: '#0b0018',
-                600: '#100221',
+              baseblack: "#0a0a0a",
+              violetserenade: {
+                500: "#7c3aed",
+                600: "#6d28d9",
+                700: "#5b21b6"
               },
-              voidviolet: {
-                500: '#6d28d9',
-                600: '#5b21b6',
-                700: '#4c1d95',
-                800: '#3b0764',
-                900: '#2e0854',
-              }
+              whitepure: "#f5f5f5"
             },
           }
         }
       }
     </script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: #f5f5f5;
+      }
+      h1, h2, h3 {
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+    </style>
   </head>
 
-  <body class="bg-night-900 text-violet-100">
+  <body class="bg-baseblack text-whitepure">
     <!-- Navbar -->
-<!-- Navbar -->
-<header class="fixed w-full top-0 z-50 bg-night-800/80 backdrop-blur-md shadow-lg">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-    <!-- Logo + nom -->
-    <div class="flex items-center space-x-3">
-      <img src="srcfile/img/serenade_logo.png" alt="Serenade logo" class="w-10 h-10 rounded-lg shadow-lg border-2 border-voidviolet-600">
-      <span class="text-2xl font-black text-voidviolet-500">Serenade</span>
-    </div>
+    <header class="fixed w-full top-0 z-50 bg-baseblack/90 backdrop-blur-md border-b border-violetserenade-700">
+      <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+        <!-- Logo + nom -->
+        <div class="flex items-center space-x-3">
+          <img src="srcfile/img/serenade_logo.png" alt="Serenade logo" class="w-10 h-10 rounded-lg shadow-lg border-2 border-violetserenade-600">
+          <span class="text-2xl font-bold text-violetserenade-500">Serenade</span>
+        </div>
 
-    <!-- Navigation -->
-    <nav class="space-x-6 text-violet-200 font-medium">
-      <a href="index.html" class="hover:text-voidviolet-400">Accueil</a>
-      <a href="services.html" class="hover:text-voidviolet-400">Services</a>
-      <a href="methodologie.html" class="hover:text-voidviolet-400">Méthodologie</a>
-      <a href="about.html" class="hover:text-voidviolet-400">À propos</a>
-      <a href="tarifs.html" class="hover:text-voidviolet-400">Tarifs</a>
-      <a href="contact.html" class="bg-voidviolet-600 px-4 py-2 rounded-lg shadow hover:bg-voidviolet-700">Contact</a>
-    </nav>
-  </div>
-</header>
-
+        <!-- Navigation -->
+        <nav class="space-x-6 text-whitepure font-medium">
+          <a href="index.html" class="hover:text-violetserenade-500">Accueil</a>
+          <a href="services.html" class="hover:text-violetserenade-500">Services</a>
+          <a href="methodologie.html" class="hover:text-violetserenade-500">Méthodologie</a>
+          <a href="about.html" class="hover:text-violetserenade-500">À propos</a>
+          <a href="tarifs.html" class="hover:text-violetserenade-500">Nos offres</a>
+          <a href="contact.html" class="bg-violetserenade-600 px-4 py-2 rounded-lg shadow hover:bg-violetserenade-700">Contact</a>
+        </nav>
+      </div>
+    </header>
 
     <!-- Contact -->
-    <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
+    <main class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
       <h2 class="text-4xl font-extrabold text-center mb-12">Contactez-nous</h2>
 
       <div class="grid md:grid-cols-2 gap-12">
         <!-- Formulaire -->
-        <div class="bg-night-800 p-8 rounded-xl shadow-lg">
+        <div class="bg-baseblack border border-violetserenade-700 p-8 rounded-xl shadow-lg">
           <form action="#" method="POST" class="space-y-6">
             <div>
               <label for="name" class="block mb-2 font-semibold">Nom</label>
               <input type="text" id="name" name="name" required
-                class="w-full px-4 py-2 rounded-lg bg-night-700 text-violet-100 border border-night-600 focus:border-voidviolet-500 focus:ring-1 focus:ring-voidviolet-500">
+                class="w-full px-4 py-2 rounded-lg bg-baseblack text-whitepure border border-violetserenade-700 focus:border-violetserenade-500 focus:ring-1 focus:ring-violetserenade-500">
             </div>
 
             <div>
               <label for="email" class="block mb-2 font-semibold">Email</label>
               <input type="email" id="email" name="email" required
-                class="w-full px-4 py-2 rounded-lg bg-night-700 text-violet-100 border border-night-600 focus:border-voidviolet-500 focus:ring-1 focus:ring-voidviolet-500">
+                class="w-full px-4 py-2 rounded-lg bg-baseblack text-whitepure border border-violetserenade-700 focus:border-violetserenade-500 focus:ring-1 focus:ring-violetserenade-500">
             </div>
 
             <div>
               <label for="message" class="block mb-2 font-semibold">Message</label>
               <textarea id="message" name="message" rows="5" required
-                class="w-full px-4 py-2 rounded-lg bg-night-700 text-violet-100 border border-night-600 focus:border-voidviolet-500 focus:ring-1 focus:ring-voidviolet-500"></textarea>
+                class="w-full px-4 py-2 rounded-lg bg-baseblack text-whitepure border border-violetserenade-700 focus:border-violetserenade-500 focus:ring-1 focus:ring-violetserenade-500"></textarea>
             </div>
 
             <!-- Captcha / honeypot -->
@@ -101,30 +96,30 @@
               <input type="text" name="website" tabindex="-1" autocomplete="off">
             </div>
 
-            <button type="submit" class="w-full bg-voidviolet-600 py-3 rounded-lg font-semibold shadow hover:bg-voidviolet-700">
+            <button type="submit" class="w-full bg-violetserenade-600 py-3 rounded-lg font-semibold shadow hover:bg-violetserenade-700">
               Envoyer le message
             </button>
           </form>
         </div>
 
         <!-- Infos -->
-        <div class="space-y-6">
+        <div class="space-y-8">
           <div>
-            <h3 class="text-2xl font-semibold mb-2">Nos coordonnées</h3>
-            <p class="text-violet-200">Email : <a href="mailto:contact.serenadesec@gmail.com" class="underline text-voidviolet-400">contact.serenadesec@gmail.com</a></p>
-            <p class="text-violet-200">Téléphone : <a href="tel:+33600000000" class="underline text-voidviolet-400">+33 6 45 22 74 70</a></p>
+            <h3 class="text-2xl font-semibold mb-2 text-violetserenade-500">Nos coordonnées</h3>
+            <p class="text-gray-300">Email : <a href="mailto:contact.serenadesec@gmail.com" class="underline text-violetserenade-500">contact.serenadesec@gmail.com</a></p>
+            <p class="text-gray-300">Téléphone : <a href="tel:+33600000000" class="underline text-violetserenade-500">+33 6 45 22 74 70</a></p>
           </div>
 
           <div>
-            <h3 class="text-2xl font-semibold mb-2">Réseaux</h3>
-            <p class="text-violet-200">
-              LinkedIn : <a href="https://www.linkedin.com/in/serenade-security-835a86382" target="_blank" class="underline text-voidviolet-400">Serenade Security</a>
+            <h3 class="text-2xl font-semibold mb-2 text-violetserenade-500">Réseaux</h3>
+            <p class="text-gray-300">
+              LinkedIn : <a href="https://www.linkedin.com/in/serenade-security-835a86382" target="_blank" class="underline text-violetserenade-500">Serenade Security</a>
             </p>
           </div>
 
           <div>
-            <h3 class="text-2xl font-semibold mb-2">Nous trouver</h3>
-            <div class="rounded-xl overflow-hidden shadow-lg border-2 border-night-700">
+            <h3 class="text-2xl font-semibold mb-2 text-violetserenade-500">Nous trouver</h3>
+            <div class="rounded-xl overflow-hidden shadow-lg border border-violetserenade-700">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2773.964219947852!2d4.879999215569933!3d45.77000097910561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea6b1234567%3A0xabcd1234567890!2sVilleurbanne!5e0!3m2!1sfr!2sfr!4v1690000000000"
                 width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
@@ -134,7 +129,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-night-900 py-6 text-center text-violet-300 text-sm">
+    <footer class="bg-baseblack py-6 text-center text-gray-400 text-sm border-t border-violetserenade-700">
       © 2025 Serenade · Audit cybersécurité · Villeurbanne / Lyon
     </footer>
   </body>

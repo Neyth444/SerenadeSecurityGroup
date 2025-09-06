@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,19 +17,13 @@
         theme: {
           extend: {
             colors: {
-              night: {
-                900: '#030007',
-                800: '#070010',
-                700: '#0b0018',
-                600: '#100221',
+              baseblack: "#0a0a0a",
+              violetserenade: {
+                500: "#7c3aed",
+                600: "#6d28d9",
+                700: "#5b21b6"
               },
-              voidviolet: {
-                500: '#6d28d9',
-                600: '#5b21b6',
-                700: '#4c1d95',
-                800: '#3b0764',
-                900: '#2e0854',
-              }
+              whitepure: "#f5f5f5"
             },
           }
         }
@@ -41,72 +35,150 @@
 
     <style>
       body {
-        font-family: 'Merriweather', serif;
-        background: linear-gradient(180deg, #0b0018, #030007);
-        color: #c4b5fd;
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: #f5f5f5;
       }
       h1, h2, h3 {
-        text-shadow: 0 0 12px rgba(109,40,217,0.6);
+        font-weight: 700;
+        letter-spacing: -0.01em;
       }
     </style>
   </head>
 
-  <body class="bg-night-900 text-violet-100">
+  <body class="bg-baseblack text-whitepure">
     <!-- Splash Screen -->
-    <div id="splash" class="fixed inset-0 z-50 flex items-center justify-center bg-night-900">
+    <div id="splash" class="fixed inset-0 z-50 flex items-center justify-center bg-baseblack">
       <img src="srcfile/img/serenade_logo.png" alt="Serenade logo"
            class="w-40 h-40 md:w-56 md:h-56 animate-pulse">
     </div>
 
     <!-- Navbar -->
-    <header class="fixed w-full top-0 z-40 bg-night-800/80 backdrop-blur-md shadow-lg">
+    <header class="fixed w-full top-0 z-40 bg-baseblack/90 backdrop-blur-md border-b border-violetserenade-700">
       <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         <!-- Logo + nom -->
         <div class="flex items-center space-x-3">
-          <img src="srcfile/img/serenade_logo.png" alt="Serenade logo" class="w-10 h-10 rounded-lg shadow-lg border-2 border-voidviolet-600">
-          <span class="text-2xl font-black text-voidviolet-500">Serenade</span>
+          <img src="srcfile/img/serenade_logo.png" alt="Serenade logo" class="w-10 h-10 rounded-lg shadow-lg border-2 border-violetserenade-600">
+          <span class="text-2xl font-bold text-violetserenade-500">Serenade</span>
         </div>
 
         <!-- Navigation -->
-        <nav class="space-x-6 text-violet-200 font-medium">
-          <a href="index.html" class="hover:text-voidviolet-400">Accueil</a>
-          <a href="services.html" class="hover:text-voidviolet-400">Services</a>
-          <a href="methodologie.html" class="hover:text-voidviolet-400">Méthodologie</a>
-          <a href="about.html" class="hover:text-voidviolet-400">À propos</a>
-          <a href="tarifs.html" class="hover:text-voidviolet-400">Tarifs</a>
-          <a href="contact.html" class="bg-voidviolet-600 px-4 py-2 rounded-lg shadow hover:bg-voidviolet-700">Contact</a>
+        <nav class="space-x-6 text-whitepure font-medium">
+          <a href="index.html" class="hover:text-violetserenade-500">Accueil</a>
+          <a href="services.html" class="hover:text-violetserenade-500">Services</a>
+          <a href="methodologie.html" class="hover:text-violetserenade-500">Méthodologie</a>
+          <a href="about.html" class="hover:text-violetserenade-500">À propos</a>
+          <a href="tarifs.html" class="hover:text-violetserenade-500">Nos offres</a>
+          <a href="contact.html" class="bg-violetserenade-600 px-4 py-2 rounded-lg shadow hover:bg-violetserenade-700">Contact</a>
         </nav>
       </div>
     </header>
 
     <!-- Hero -->
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-      <h2 class="text-4xl md:text-6xl font-extrabold mb-6">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6">
         Audit & Sécurité Informatique pour PME / TPE
       </h2>
-      <p class="max-w-2xl mb-8 text-violet-200">
+      <p class="max-w-2xl mb-8 text-gray-300 leading-relaxed">
         Protégez vos données, vos clients et votre réputation grâce à des audits cybersécurité complets.
       </p>
-      <a href="contact.html" class="bg-voidviolet-600 px-6 py-3 rounded-lg text-lg font-semibold shadow hover:bg-voidviolet-700">
+      <a href="contact.html" class="bg-violetserenade-600 px-6 py-3 rounded-lg text-lg font-semibold shadow hover:bg-violetserenade-700">
         Demander un audit
       </a>
     </section>
 
-    <!-- Pourquoi nous -->
-    <section class="py-20 bg-night-800">
-      <div class="max-w-5xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-10">Pourquoi nous ?</h3>
-        <div class="grid md:grid-cols-4 gap-8">
-          <div><h4 class="font-semibold mb-2">🔧 Expertise technique</h4><p>Audits réalisés avec méthodologies reconnues (OWASP, PTES).</p></div>
-          <div><h4 class="font-semibold mb-2">📊 Rapports clairs</h4><p>Des résultats compréhensibles, classés par priorité.</p></div>
-          <div><h4 class="font-semibold mb-2">🤝 Proximité</h4><p>Basés à Villeurbanne.</p></div>
-          <div><h4 class="font-semibold mb-2">💸 Prix transparents</h4><p>Aucun frais caché, devis détaillé dès le départ.</p></div>
+    <!-- Qu'est-ce qu'un audit -->
+    <section class="py-20 bg-baseblack border-t border-violetserenade-700">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Qu’est-ce qu’un audit de cybersécurité ?</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Un audit de cybersécurité est un examen complet de vos systèmes informatiques, réseaux et politiques de sécurité.
+          Son objectif : <span class="text-violetserenade-500 font-semibold">identifier les vulnérabilités</span> et proposer
+          des solutions pour les corriger. C’est un moyen de prévenir les attaques avant qu’elles ne se produisent,
+          protéger vos données sensibles et préserver la confiance de vos clients et partenaires.
+        </p>
+      </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="py-20 bg-baseblack">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-10">Les avantages d’un audit de cybersécurité</h3>
+        <div class="grid md:grid-cols-2 gap-12 text-left">
+          <div>
+            <h4 class="font-semibold text-xl mb-2 text-violetserenade-500">🔎 Identification des vulnérabilités</h4>
+            <p class="text-gray-300">Détection des failles liées à des logiciels obsolètes, configurations incorrectes ou mauvaises pratiques.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-xl mb-2 text-violetserenade-500">🛡️ Prévention des cyberattaques</h4>
+            <p class="text-gray-300">Mise en place de mesures préventives (patchs, mises à jour, sensibilisation des employés).</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-xl mb-2 text-violetserenade-500">🔒 Protection des données sensibles</h4>
+            <p class="text-gray-300">Sécurisation des données personnelles et financières contre les accès non autorisés.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-xl mb-2 text-violetserenade-500">💸 Réduction des coûts</h4>
+            <p class="text-gray-300">Éviter les pertes financières et interruptions dues à une cyberattaque.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Types d'audit -->
+    <section class="py-20 bg-baseblack border-t border-violetserenade-700">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-10">Nos types d’audits</h3>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="bg-baseblack border border-violetserenade-700 p-8 rounded-xl shadow-lg">
+            <h4 class="text-2xl font-semibold mb-4 text-violetserenade-500">Audit Flash</h4>
+            <p class="text-gray-300">
+              Idéal pour une première approche. Une évaluation rapide pour identifier les failles majeures
+              et planifier des actions correctives prioritaires.
+            </p>
+          </div>
+          <div class="bg-baseblack border border-violetserenade-700 p-8 rounded-xl shadow-lg">
+            <h4 class="text-2xl font-semibold mb-4 text-violetserenade-500">Audit Avancé</h4>
+            <p class="text-gray-300">
+              Analyse exhaustive de vos systèmes, réseaux, applications et pratiques.
+              Permet de découvrir les vulnérabilités complexes souvent ignorées.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Étapes -->
+    <section class="py-20 bg-baseblack">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-10">Les étapes d’un audit efficace</h3>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-semibold mb-2 text-violetserenade-500">🏢 Environnement physique</h4>
+            <p class="text-gray-300">Analyse rigoureuse des locaux et accès physiques.</p>
+          </div>
+          <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-semibold mb-2 text-violetserenade-500">💻 Système d’information</h4>
+            <p class="text-gray-300">Examen complet des systèmes et applications.</p>
+          </div>
+          <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-semibold mb-2 text-violetserenade-500">🗂 Active Directory & Azure</h4>
+            <p class="text-gray-300">Analyse des configurations et droits d’accès.</p>
+          </div>
+          <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-semibold mb-2 text-violetserenade-500">🔥 Pare-feu</h4>
+            <p class="text-gray-300">Évaluation de la configuration et efficacité.</p>
+          </div>
+          <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-semibold mb-2 text-violetserenade-500">☁ Microsoft 365 & Azure</h4>
+            <p class="text-gray-300">Analyse de la sécurité des environnements cloud.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-night-900 py-6 text-center text-violet-300 text-sm">
+    <footer class="bg-baseblack py-6 text-center text-gray-400 text-sm border-t border-violetserenade-700">
       © 2025 Serenade · Audit cybersécurité · Villeurbanne / Lyon
     </footer>
 

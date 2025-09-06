@@ -8,17 +8,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Merriweather', serif;
-        background: linear-gradient(180deg, #0b0018, #030007);
-        color: #c4b5fd;
-      }
-      h1, h2, h3 {
-        text-shadow: 0 0 12px rgba(109,40,217,0.6);
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -26,126 +17,130 @@
         theme: {
           extend: {
             colors: {
-              night: {
-                900: '#030007',
-                800: '#070010',
-                700: '#0b0018',
-                600: '#100221',
+              baseblack: "#0a0a0a",
+              violetserenade: {
+                500: "#7c3aed",
+                600: "#6d28d9",
+                700: "#5b21b6"
               },
-              voidviolet: {
-                500: '#6d28d9',
-                600: '#5b21b6',
-                700: '#4c1d95',
-                800: '#3b0764',
-                900: '#2e0854',
-              }
+              whitepure: "#f5f5f5"
             },
           }
         }
       }
     </script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: #f5f5f5;
+      }
+      h1, h2, h3 {
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+    </style>
   </head>
 
-  <body class="bg-night-900 text-violet-100">
+  <body class="bg-baseblack text-whitepure">
     <!-- Navbar -->
-<!-- Navbar -->
-<header class="fixed w-full top-0 z-50 bg-night-800/80 backdrop-blur-md shadow-lg">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-    <!-- Logo + nom -->
-    <div class="flex items-center space-x-3">
-      <img src="srcfile/img/serenade_logo.png" alt="Serenade logo" class="w-10 h-10 rounded-lg shadow-lg border-2 border-voidviolet-600">
-      <span class="text-2xl font-black text-voidviolet-500">Serenade</span>
-    </div>
+    <header class="fixed w-full top-0 z-50 bg-baseblack/90 backdrop-blur-md border-b border-violetserenade-700">
+      <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+        <!-- Logo + nom -->
+        <div class="flex items-center space-x-3">
+          <img src="srcfile/img/serenade_logo.png" alt="Serenade logo" class="w-10 h-10 rounded-lg shadow-lg border-2 border-violetserenade-600">
+          <span class="text-2xl font-bold text-violetserenade-500">Serenade</span>
+        </div>
 
-    <!-- Navigation -->
-    <nav class="space-x-6 text-violet-200 font-medium">
-      <a href="index.html" class="hover:text-voidviolet-400">Accueil</a>
-      <a href="services.html" class="hover:text-voidviolet-400">Services</a>
-      <a href="methodologie.html" class="hover:text-voidviolet-400">Méthodologie</a>
-      <a href="about.html" class="hover:text-voidviolet-400">À propos</a>
-      <a href="tarifs.html" class="hover:text-voidviolet-400">Tarifs</a>
-      <a href="contact.html" class="bg-voidviolet-600 px-4 py-2 rounded-lg shadow hover:bg-voidviolet-700">Contact</a>
-    </nav>
-  </div>
-</header>
-
+        <!-- Navigation -->
+        <nav class="space-x-6 text-whitepure font-medium">
+          <a href="index.html" class="hover:text-violetserenade-500">Accueil</a>
+          <a href="services.html" class="hover:text-violetserenade-500">Services</a>
+          <a href="methodologie.html" class="hover:text-violetserenade-500">Méthodologie</a>
+          <a href="about.html" class="hover:text-violetserenade-500">À propos</a>
+          <a href="tarifs.html" class="hover:text-violetserenade-500">Nos offres</a>
+          <a href="contact.html" class="bg-violetserenade-600 px-4 py-2 rounded-lg shadow hover:bg-violetserenade-700">Contact</a>
+        </nav>
+      </div>
+    </header>
 
     <!-- Méthodologie -->
-    <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
+    <main class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
       <h2 class="text-4xl font-extrabold text-center mb-12">Notre Méthodologie d’Audit Cybersécurité</h2>
 
-      <p class="text-violet-200 mb-12 text-center max-w-3xl mx-auto">
-        La cybersécurité ne s’improvise pas. Chez <span class="text-voidviolet-400 font-semibold">Serenade</span>, 
+      <p class="text-gray-300 mb-12 text-center max-w-3xl mx-auto">
+        La cybersécurité ne s’improvise pas. Chez <span class="text-violetserenade-500 font-semibold">Serenade</span>, 
         nous suivons une démarche rigoureuse et reconnue internationalement (OWASP, PTES) afin de garantir un audit fiable, transparent et exploitable.  
         Voici comment nous procédons concrètement :
       </p>
 
       <div class="space-y-16">
         <!-- Step 1 -->
-        <div>
-          <h3 class="text-3xl font-bold mb-4">1. Prise de contact & cadrage</h3>
-          <p class="text-violet-200 mb-4">
+        <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-4 text-violetserenade-500">1. Prise de contact & cadrage</h3>
+          <p class="text-gray-300 mb-4">
             Nous commençons par un entretien (visio, téléphone ou sur site) pour comprendre vos enjeux : 
             type d’activité, taille de votre infrastructure, applications critiques, données sensibles.
           </p>
-          <ul class="list-disc list-inside text-violet-300 space-y-2">
+          <ul class="list-disc list-inside text-gray-400 space-y-2">
             <li>Définition du périmètre (site web, réseau interne, cloud, postes utilisateurs…)</li>
             <li>Choix du type d’audit (interne, externe, applicatif, organisationnel)</li>
-            <li>Signature d’un accord de confidentialité (NDA) pour protéger vos informations</li>
+            <li>Signature d’un accord de confidentialité (NDA)</li>
           </ul>
         </div>
 
         <!-- Step 2 -->
-        <div>
-          <h3 class="text-3xl font-bold mb-4">2. Tests & analyses techniques</h3>
-          <p class="text-violet-200 mb-4">
+        <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-4 text-violetserenade-500">2. Tests & analyses techniques</h3>
+          <p class="text-gray-300 mb-4">
             Une fois le cadre défini, nous lançons une batterie de tests techniques afin d’identifier les vulnérabilités.
-            Nous utilisons à la fois des outils automatisés et des techniques manuelles pour obtenir une vision réaliste des risques.
+            Nous combinons outils automatisés et techniques manuelles.
           </p>
-          <ul class="list-disc list-inside text-violet-300 space-y-2">
-            <li><strong>Scan automatisé :</strong> identification des ports ouverts, services actifs, versions logicielles.</li>
-            <li><strong>Tests manuels :</strong> recherche d’injections SQL, XSS, failles d’authentification.</li>
-            <li><strong>Frameworks de référence :</strong> OWASP Top 10, MITRE ATT&CK.</li>
-            <li><strong>Outils utilisés :</strong> Nmap, Nikto, Burp Suite, WPScan, etc.</li>
+          <ul class="list-disc list-inside text-gray-400 space-y-2">
+            <li><strong>Scan automatisé :</strong> ports ouverts, services actifs, versions logicielles.</li>
+            <li><strong>Tests manuels :</strong> injections SQL, XSS, failles d’authentification.</li>
+            <li><strong>Référentiels :</strong> OWASP Top 10, MITRE ATT&CK.</li>
+            <li><strong>Outils :</strong> Nmap, Nikto, Burp Suite, WPScan…</li>
           </ul>
         </div>
 
         <!-- Step 3 -->
-        <div>
-          <h3 class="text-3xl font-bold mb-4">3. Rapport clair et priorisé</h3>
-          <p class="text-violet-200 mb-4">
+        <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-4 text-violetserenade-500">3. Rapport clair et priorisé</h3>
+          <p class="text-gray-300 mb-4">
             À la fin des tests, nous rédigeons un rapport structuré et adapté à vos besoins. 
-            Ce document n’est pas un simple listing technique : c’est un outil de décision pour vos équipes.
+            Ce n’est pas un simple listing technique : c’est un outil d’aide à la décision.
           </p>
-          <ul class="list-disc list-inside text-violet-300 space-y-2">
+          <ul class="list-disc list-inside text-gray-400 space-y-2">
             <li>Résumé exécutif (accessible aux non-techniciens)</li>
-            <li>Tableau des vulnérabilités avec niveau de criticité</li>
-            <li>Preuves (captures d’écran, logs, démonstrations contrôlées)</li>
+            <li>Tableau des vulnérabilités avec criticité</li>
+            <li>Preuves (captures d’écran, logs, démonstrations)</li>
             <li>Recommandations concrètes et hiérarchisées</li>
           </ul>
         </div>
 
         <!-- Step 4 -->
-        <div>
-          <h3 class="text-3xl font-bold mb-4">4. Suivi & accompagnement</h3>
-          <p class="text-violet-200 mb-4">
+        <div class="bg-baseblack border border-violetserenade-700 p-6 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-4 text-violetserenade-500">4. Suivi & accompagnement</h3>
+          <p class="text-gray-300 mb-4">
             Un audit n’est utile que si les vulnérabilités sont corrigées. 
-            Nous proposons un accompagnement pour vous aider à implémenter les mesures correctives et vérifier leur efficacité.
+            Nous vous aidons à implémenter les mesures correctives et à vérifier leur efficacité.
           </p>
-          <ul class="list-disc list-inside text-violet-300 space-y-2">
-            <li>Support technique pour la correction des failles</li>
+          <ul class="list-disc list-inside text-gray-400 space-y-2">
+            <li>Support technique pour les correctifs</li>
             <li>Ateliers de sensibilisation pour vos collaborateurs</li>
-            <li>Possibilité de <strong>re-test</strong> après corrections</li>
+            <li><strong>Re-test</strong> après corrections</li>
             <li>Suivi régulier pour maintenir un haut niveau de sécurité</li>
           </ul>
         </div>
       </div>
 
       <!-- Conclusion -->
-      <div class="mt-20 bg-night-800 p-8 rounded-xl shadow-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Une démarche cadrée et transparente</h3>
-        <p class="text-violet-200">
-          Avec <span class="text-voidviolet-400 font-semibold">Serenade</span>, vous savez toujours ce que nous faisons, pourquoi nous le faisons,
+      <div class="mt-20 bg-baseblack border border-violetserenade-700 p-8 rounded-xl shadow-lg text-center">
+        <h3 class="text-2xl font-semibold mb-4 text-violetserenade-500">Une démarche cadrée et transparente</h3>
+        <p class="text-gray-300">
+          Avec <span class="text-violetserenade-500 font-semibold">Serenade</span>, vous savez toujours ce que nous faisons, pourquoi nous le faisons,
           et comment corriger les problèmes détectés.  
           Notre méthodologie garantit la sécurité de vos données, sans surprise ni jargon inutile.
         </p>
@@ -153,7 +148,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-night-900 py-6 text-center text-violet-300 text-sm">
+    <footer class="bg-baseblack py-6 text-center text-gray-400 text-sm border-t border-violetserenade-700">
       © 2025 Serenade · Audit cybersécurité · Villeurbanne / Lyon
     </footer>
   </body>
