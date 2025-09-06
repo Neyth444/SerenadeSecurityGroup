@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serenade · Audit & Sécurité Informatique</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              night: {
+                900: '#030007',
+                800: '#070010',
+                700: '#0b0018',
+                600: '#100221',
+              },
+              voidviolet: {
+                500: '#6d28d9',
+                600: '#5b21b6',
+                700: '#4c1d95',
+                800: '#3b0764',
+                900: '#2e0854',
+              }
+            },
+          }
+        }
+      }
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <style>
+      body {
+        font-family: 'Merriweather', serif;
+        background: linear-gradient(180deg, #0b0018, #030007);
+        color: #c4b5fd;
+      }
+      h1, h2, h3 {
+        text-shadow: 0 0 12px rgba(109,40,217,0.6);
+      }
+    </style>
+  </head>
+
+  <body class="bg-night-900 text-violet-100">
+    <!-- Splash Screen -->
+    <div id="splash" class="fixed inset-0 z-50 flex items-center justify-center bg-night-900">
+      <img src="srcfile/img/serenade_logo.png" alt="Serenade logo"
+           class="w-40 h-40 md:w-56 md:h-56 animate-pulse">
+    </div>
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-40 bg-night-800/80 backdrop-blur-md shadow-lg">
+      <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+        <!-- Logo + nom -->
+        <div class="flex items-center space-x-3">
+          <img src="srcfile/img/serenade_logo.png" alt="Serenade logo" class="w-10 h-10 rounded-lg shadow-lg border-2 border-voidviolet-600">
+          <span class="text-2xl font-black text-voidviolet-500">Serenade</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="space-x-6 text-violet-200 font-medium">
+          <a href="index.html" class="hover:text-voidviolet-400">Accueil</a>
+          <a href="services.html" class="hover:text-voidviolet-400">Services</a>
+          <a href="methodologie.html" class="hover:text-voidviolet-400">Méthodologie</a>
+          <a href="about.html" class="hover:text-voidviolet-400">À propos</a>
+          <a href="tarifs.html" class="hover:text-voidviolet-400">Tarifs</a>
+          <a href="contact.html" class="bg-voidviolet-600 px-4 py-2 rounded-lg shadow hover:bg-voidviolet-700">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-6">
+        Audit & Sécurité Informatique pour PME / TPE
+      </h2>
+      <p class="max-w-2xl mb-8 text-violet-200">
+        Protégez vos données, vos clients et votre réputation grâce à des audits cybersécurité complets.
+      </p>
+      <a href="contact.html" class="bg-voidviolet-600 px-6 py-3 rounded-lg text-lg font-semibold shadow hover:bg-voidviolet-700">
+        Demander un audit
+      </a>
+    </section>
+
+    <!-- Pourquoi nous -->
+    <section class="py-20 bg-night-800">
+      <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-10">Pourquoi nous ?</h3>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div><h4 class="font-semibold mb-2">🔧 Expertise technique</h4><p>Audits réalisés avec méthodologies reconnues (OWASP, PTES).</p></div>
+          <div><h4 class="font-semibold mb-2">📊 Rapports clairs</h4><p>Des résultats compréhensibles, classés par priorité.</p></div>
+          <div><h4 class="font-semibold mb-2">🤝 Proximité</h4><p>Basés à Villeurbanne.</p></div>
+          <div><h4 class="font-semibold mb-2">💸 Prix transparents</h4><p>Aucun frais caché, devis détaillé dès le départ.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-night-900 py-6 text-center text-violet-300 text-sm">
+      © 2025 Serenade · Audit cybersécurité · Villeurbanne / Lyon
+    </footer>
+
+    <!-- Script Splash -->
+    <script>
+      window.addEventListener("load", () => {
+        const splash = document.getElementById("splash");
+        gsap.to(splash, {
+          opacity: 0,
+          duration: 0.5,
+          delay: 1.5,
+          onComplete: () => splash.style.display = "none"
+        });
+      });
+    </script>
+  </body>
+</html>
