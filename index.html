@@ -47,10 +47,16 @@
   </head>
 
   <body class="bg-baseblack text-whitepure">
-    <!-- Splash Screen -->
-    <div id="splash" class="fixed inset-0 z-50 flex items-center justify-center bg-baseblack">
-      <img src="srcfile/img/serenade_logo.png" alt="Serenade logo"
-           class="w-40 h-40 md:w-56 md:h-56 animate-pulse">
+
+<!-- Splash Screen -->
+<div id="splash" class="fixed inset-0 z-50 flex items-center justify-center bg-black">
+  <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-widest">
+    Serenade Security
+  </h1>
+</div>
+
+
+
     </div>
 
     <!-- Navbar -->
@@ -182,17 +188,34 @@
       © 2025 Serenade · Audit cybersécurité · Villeurbanne / Lyon
     </footer>
 
-    <!-- Script Splash -->
-    <script>
-      window.addEventListener("load", () => {
-        const splash = document.getElementById("splash");
-        gsap.to(splash, {
-          opacity: 0,
-          duration: 0.5,
-          delay: 1.5,
-          onComplete: () => splash.style.display = "none"
-        });
-      });
-    </script>
+<!-- Script Splash -->
+<script>
+  // Fond noir au démarrage
+  document.body.style.background = "#000";
+
+  window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+
+    // Fade out du splash et retour au dégradé
+    gsap.to(splash, {
+      opacity: 0,
+      duration: 0.6,
+      delay: 1.5,
+      onComplete: () => {
+        splash.style.display = "none";
+        document.body.style.background =
+          "linear-gradient(180deg, #0b0018, #030007)";
+      }
+    });
+
+    // Animation d’entrée du texte (sobre)
+    gsap.fromTo(
+      "#splash h1",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+    );
+  });
+</script>
+
   </body>
 </html>
